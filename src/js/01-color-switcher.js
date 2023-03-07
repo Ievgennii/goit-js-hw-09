@@ -18,6 +18,7 @@ function getRandomHexColor() {
 function onChangeColor() {
   const newColor = getRandomHexColor();
   document.body.style.backgroundColor = newColor;
+  console.log(newColor);
   btnStart.disabled = true;
   btnStop.disabled = false;
 }
@@ -26,4 +27,5 @@ function stopChangeColor() {
   clearInterval(timerId);
   btnStart.disabled = false;
   btnStop.disabled = true;
+  document.body.style.backgroundColor = '#fff';
 }
