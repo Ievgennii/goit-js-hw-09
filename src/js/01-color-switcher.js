@@ -27,5 +27,5 @@ function stopChangeColor() {
   clearInterval(timerId);
   btnStart.disabled = false;
   btnStop.disabled = true;
-  document.body.style.backgroundColor = '#fff';
+  // document.body.style.backgroundColor = '#fff';
 }
