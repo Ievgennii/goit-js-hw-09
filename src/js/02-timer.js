@@ -3,6 +3,8 @@ import flatpickr from 'flatpickr';
 // Дополнительный импорт стилей
 import 'flatpickr/dist/flatpickr.min.css';
 
+import Notiflix from 'notiflix';
+
 // const myDatePicker = document.getElementById("datetime-picker");
 let myDatePicker;
 
@@ -37,7 +39,8 @@ flatpickr('#datetime-picker', options);
 
 function compareDates(Date, DatePicker) {
   if (DatePicker <= Date) {
-    alert('Please choose a date in the future');
+    // alert('Please choose a date in the future');
+    Notiflix.Notify.info('Please choose a date in the future');
     btnStart.disabled = true;
   } else {
     btnStart.disabled = false;    
